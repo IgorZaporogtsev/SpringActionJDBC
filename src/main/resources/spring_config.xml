@@ -15,9 +15,23 @@
     </bean>
 
 
+    <!-- Here we're defining studentJDBCTemplate bean -->
+    <bean id="jdbcTemplateDeveloperDao"
+          class="JdbcTemplateDeveloperDaoImpl">
+        <property name="dataSource"  ref="dataSource" />
+    </bean>
+
+
+
+
     <bean id="jdbcTemplate"
           class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
         <constructor-arg ref="dataSource" />
     </bean>
+
+    <!--<bean id="spitterDao"-->
+          <!--class="com.habuma.spitter.persistence.SimpleJdbcTemplateSpitterDao">-->
+        <!--<property name="jdbcTemplate" ref="jdbcTemplate" />-->
+    <!--</bean>-->
 
 </beans>
