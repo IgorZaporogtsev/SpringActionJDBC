@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MainSpitter {
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("/config.xml");
-        JdbcSpitterDao dao = (JdbcSpitterDao) ctx.getBean("jdbcSpitterDao", JdbcSpitterDao.class);
+        JdbcSpitterDao dao = (JdbcSpitterDao) ctx.getBean("jdbcSpitterDao");
 
         Spitter spitter = new Spitter();
         spitter.setFullName("Alik Mheryan");

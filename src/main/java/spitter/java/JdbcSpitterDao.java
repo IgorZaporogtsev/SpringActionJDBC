@@ -1,14 +1,9 @@
 package spitter.java;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.simple.*;
 import org.springframework.stereotype.Component;
-
+import org.springframework.stereotype.Repository;
 import javax.sql.DataSource;
-import java.util.HashMap;
-import java.util.Map;
 
 
 @Component("jdbcSpitterDao")
@@ -20,13 +15,6 @@ public class JdbcSpitterDao implements SpitterDao {
     public void setDataSource(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
-
-/*
-    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) { //TODO SimpleJdbcTemplate
-        this.jdbcTemplate = jdbcTemplate;
-    }
-*/
-
 
     private static final String SQL_INSERT_SPITTER =
             "insert into spitter(username, password, fullname, email) values(?, ?, ?, ?)";
