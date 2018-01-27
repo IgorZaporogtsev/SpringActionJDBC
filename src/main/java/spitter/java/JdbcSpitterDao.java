@@ -16,21 +16,20 @@ public class JdbcSpitterDao implements SpitterDao {
 
     private JdbcTemplate jdbcTemplate;
 
-//    @Autowired
-//    public void setDataSource(DataSource dataSource) {
-//        this.jdbcTemplate = new JdbcTemplate(dataSource);
-//    }
+    @Autowired
+    public void setDataSource(DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    }
 
 /*
-
-    public void setJdbcTemplate(SimpleJdbcTemplate jdbcTemplate) {
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) { //TODO SimpleJdbcTemplate
         this.jdbcTemplate = jdbcTemplate;
     }
 */
 
 
     private static final String SQL_INSERT_SPITTER =
-            "insert into spitter(username, password, fullname, email, update_by_email) values(?, ?, ?, ?, ?)";
+            "insert into spitter(username, password, fullname, email) values(?, ?, ?, ?)";
     public void addSpitter(Spitter spitter) {
         jdbcTemplate.update(SQL_INSERT_SPITTER,
                 spitter.getUsername(),

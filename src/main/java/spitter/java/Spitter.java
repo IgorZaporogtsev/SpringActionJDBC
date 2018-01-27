@@ -15,7 +15,6 @@ public class Spitter {
     }
 
     public long getId() {
-
         return id;
     }
 
