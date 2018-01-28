@@ -9,8 +9,8 @@ public class MainSpitter {
         JdbcSpitterDao dao = (JdbcSpitterDao) ctx.getBean("jdbcSpitterDao");
 
         Spitter spitter = new Spitter();
-        spitter.setFullName("Alik Mheryan");
-        spitter.setUsername("Alik");
+        spitter.setFullName("Miluoki");
+        spitter.setUsername("Geneva");
         spitter.setPassword("tester");
         spitter.setEmail("alik@gmail.com");
         dao.addSpitter(spitter);
