@@ -5,8 +5,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainSpitter {
     public static void main(String[] args) {
+/*
         ApplicationContext ctx = new ClassPathXmlApplicationContext("/config.xml");
         JdbcSpitterDao dao = (JdbcSpitterDao) ctx.getBean("jdbcSpitterDao");
+
+
+*/
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/config.xml");
+        JdbcSpitterDao dao = (JdbcSpitterDao) ctx.getBean("HibernateSpitterDao");
 
         Spitter spitter = new Spitter();
         spitter.setFullName("Miluoki");
@@ -15,8 +21,7 @@ public class MainSpitter {
         spitter.setEmail("alik@gmail.com");
         dao.addSpitter(spitter);
 
-        //Spitter retrievedSpitter = dao.getSpitterById(3L);
-        //System.out.print(retrievedSpitter);
+
 
     }
 }

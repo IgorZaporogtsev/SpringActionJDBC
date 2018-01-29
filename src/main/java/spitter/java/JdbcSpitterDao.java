@@ -19,6 +19,7 @@ public class JdbcSpitterDao implements SpitterDao {
     }
     private static final String SQL_INSERT_SPITTER = "insert into spitter(username, password, fullname, email) values(?, ?, ?, ?)";
 
+    @Override
     public void addSpitter(Spitter spitter) {
         jdbcTemplate.update(SQL_INSERT_SPITTER,
                 spitter.getUsername(),
