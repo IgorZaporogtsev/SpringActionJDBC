@@ -1,4 +1,4 @@
-package spitter;
+package spitter.model;
 
 import org.springframework.stereotype.Component;
 

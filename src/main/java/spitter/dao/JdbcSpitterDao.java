@@ -1,7 +1,8 @@
-package spitter;
+package spitter.dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import spitter.model.Spitter;
 
 import javax.sql.DataSource;
 

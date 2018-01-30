@@ -2,6 +2,8 @@ package spitter;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import spitter.dao.JdbcSpitterDao;
+import spitter.model.Spitter;
 
 public class MainSpitter {
     public static void main(String[] args) {

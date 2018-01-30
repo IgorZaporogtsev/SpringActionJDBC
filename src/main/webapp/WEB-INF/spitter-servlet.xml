@@ -19,7 +19,11 @@
     <!--Обрабатывает запросы на получение статических ресурсов-->
     <mvc:resources mapping="/resources/**" location="/resources/" />
 
+    <context:component-scan base-package="spitter" />
 
+    <context:component-scan base-package="spitter">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service" />
+    </context:component-scan>
 
 
 </beans>
