@@ -22,6 +22,9 @@
         <fileset id="fileset3" name="Config" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/config.xml</file>
         </fileset>
+        <fileset id="fileset4" name="Spitter Servlet" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/spitter-servlet.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
