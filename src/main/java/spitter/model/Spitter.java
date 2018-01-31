@@ -2,16 +2,29 @@ package spitter.model;
 
 import org.springframework.stereotype.Component;
 
-@Component
+import javax.persistence.*;
+
+//@Component this use with jdbcSpitterDAOImpl TODO
+@Entity
+@Table(name = "spitter")
 public class Spitter {
 
-
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String username;
-    private String password;
-    private String fullName;
-    private String email;
 
+    @Column(name = "username")
+    private String username;
+
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "fullName")
+    private String fullName;
+
+    @Column(name = "email")
+    private String email;
 
 
     public Spitter() {

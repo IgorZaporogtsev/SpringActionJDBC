@@ -7,8 +7,12 @@ import spitter.model.Spitter;
 import javax.sql.DataSource;
 
 
-@Component("jdbcSpitterDao")
-public class JdbcSpitterDao implements SpitterDao {
+//@Component("jdbcSpitterDao")
+public class JdbcSpitterDaoImpl {
+
+/*
+
+
 
     private JdbcTemplate jdbcTemplate;
 
@@ -29,6 +33,5 @@ public class JdbcSpitterDao implements SpitterDao {
 
 
 
-
-
+*/
 }

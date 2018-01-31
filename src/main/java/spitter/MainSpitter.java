@@ -2,19 +2,19 @@ package spitter;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import spitter.dao.JdbcSpitterDao;
+import spitter.dao.JdbcSpitterDaoImpl;
 import spitter.model.Spitter;
 
 public class MainSpitter {
     public static void main(String[] args) {
 /*
         ApplicationContext ctx = new ClassPathXmlApplicationContext("/config.xml");
-        JdbcSpitterDao dao = (JdbcSpitterDao) ctx.getBean("jdbcSpitterDao");
+        JdbcSpitterDaoImpl dao = (JdbcSpitterDaoImpl) ctx.getBean("jdbcSpitterDao");
 
 
 */
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("/config.xml");
-        JdbcSpitterDao dao = (JdbcSpitterDao) ctx.getBean("HibernateSpitterDao");
+      /*  ApplicationContext ctx = new ClassPathXmlApplicationContext("/config.xml");
+        JdbcSpitterDaoImpl dao = (JdbcSpitterDaoImpl) ctx.getBean("HibernateSpitterDao");
 
         Spitter spitter = new Spitter();
         spitter.setFullName("Miluoki");
@@ -24,6 +24,6 @@ public class MainSpitter {
         dao.addSpitter(spitter);
 
 
-
+*/
     }
 }
